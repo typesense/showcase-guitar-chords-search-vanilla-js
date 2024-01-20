@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "typesense": "^1.7.2",
     "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "instantsearch.js": "^4.64.0",
+    "typesense-instantsearch-adapter": "^2.7.1"
   }
 }
