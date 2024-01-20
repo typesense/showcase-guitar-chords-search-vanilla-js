@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:typesense": "docker compose up",
+    "index:typesense": "npx tsx ./scripts/indexTypesense.ts"
   },
   "devDependencies": {
+    "dotenv": "^16.3.2",
     "typesense": "^1.7.2",
     "vite": "^5.0.8"
   },
