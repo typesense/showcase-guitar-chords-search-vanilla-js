@@ -1,7 +1,7 @@
 import './style.css';
-import './styles/heading.css';
-import './styles/searchAndFilter.css';
-import './styles/infiniteHits.css';
+import './src/styles/heading.css';
+import './src/styles/searchAndFilter.css';
+import './src/styles/infiniteHits.css';
 
 import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
 import instantsearch from 'instantsearch.js';
@@ -10,6 +10,7 @@ import {
   infiniteHits,
   refinementList,
 } from 'instantsearch.js/es/widgets';
+import RenderChord from './src/reactChords';
 
 const adapter = new TypesenseInstantSearchAdapter({
   server: {
@@ -45,10 +46,18 @@ search.addWidgets([
     container: '#infiniteHits',
     templates: {
       item(hit, { html, components }) {
+        const chord = `${RenderChord(hit.positions[0])}`;
+        const positionCount = hit.positions.length;
         return html`
-          <h2>
+          <h2 class="chord_name">
             ${components.Highlight({ attribute: 'key', hit })}${hit.suffix}
           </h2>
+          ${html([chord])}
+          <span class="posCount"
+            >${positionCount > 1
+              ? positionCount + ' positions'
+              : '1 position'}</span
+          >
         `;
       },
     },
