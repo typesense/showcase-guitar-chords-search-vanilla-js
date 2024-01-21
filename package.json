@@ -8,9 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "start:typesense": "docker compose up",
-    "index:typesense": "npx tsx ./scripts/indexTypesense.ts"
+    "index:typesense": "npx tsx ./scripts/indexTypesense.ts",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
+    "cypress": "^13.6.3",
     "dotenv": "^16.3.2",
     "typesense": "^1.7.2",
     "vite": "^5.0.8"
