@@ -14,7 +14,7 @@ import RenderChord from './src/reactChords';
 
 const adapter = new TypesenseInstantSearchAdapter({
   server: {
-    apiKey: import.meta.env.VITE_TYPESENSE_SEARCH_ONLY || 'xyz',
+    apiKey: import.meta.env.VITE_TYPESENSE_SEARCH_ONLY_API_KEY || 'xyz',
     nodes: [
       {
         host: import.meta.env.VITE_TYPESENSE_HOST || 'localhost',

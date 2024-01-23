@@ -65,7 +65,7 @@ Open http://localhost:5173 to see the app ✌️
 Set env variables to point the app to the Typesense Cluster
 
 ```env
-VITE_TYPESENSE_SEARCH_ONLY=xxx
+VITE_TYPESENSE_SEARCH_ONLY_API_KEY=xxx
 VITE_TYPESENSE_HOST=xxx.typesense.net
 VITE_TYPESENSE_PORT=443
 VITE_TYPESENSE_PROTOCOL=https
