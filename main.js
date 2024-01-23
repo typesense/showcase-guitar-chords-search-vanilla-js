@@ -67,6 +67,9 @@ search.addWidgets([
     container: '#key_refinementList',
     attribute: 'key',
     sortBy: ['name'],
+    limit: 7,
+    showMore: true,
+    showMoreLimit: 100,
   }),
   refinementList({
     container: '#suffix_refinementList',
