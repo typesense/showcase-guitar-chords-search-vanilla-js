@@ -47,6 +47,7 @@ body {
   min-height: 100dvh;
   color: var(--700);
   background-color: var(--100);
+  overflow-x: hidden;
 }
 
 a {
